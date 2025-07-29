@@ -1,0 +1,16 @@
+#!/bin/sh
+
+for x in amd64 arm64 ; do
+	for y in darwin linux windows ; do
+		z=""
+		if [ $y = windows ] ; then
+			z=.exe
+		fi
+		o=$y
+		if [ $y = darwin ] ; then
+			o=macos
+		fi
+		echo go build -tags  timetzdata -o release/spreads-$o-$x$z
+		GOARCH=$x GOOS=$y go build -tags timetzdata -o release/spreads-$o-$x$z
+	done
+done

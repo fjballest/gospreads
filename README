@@ -1,0 +1,11 @@
+Create a file named ig.txt
+it should contain your *DEMO* account key, user and pass like in this example:
+
+IGKEY 3e0bfe25435425345234524352340a89b4681
+IGACCOUNT BZ3337
+IGUID spreadapp
+IGPASS 33Sprexdxx
+
+
+put the file in the same directory where the binary is kept, and just
+run the binary.
